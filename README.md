@@ -39,6 +39,10 @@ Terminalde:
 git add README.md
 git commit -m "Add README"
 git push
-## 📸 Sample Output
+## 📸 Sample Outputs
 
+### Bar Chart
 ![Category Chart](category_chart.png)
+
+### Pie Chart
+![Category Pie Chart](category_pie_chart.png)
