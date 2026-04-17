@@ -13,7 +13,7 @@ from database import (
 )
 
 from database import delete_expense
-from charts import plot_category_expenses
+from charts import plot_category_expenses,plot_category_pie_chart
 
 
 def show_categories():
@@ -140,6 +140,7 @@ def main():
         print("9. Show Payment Methods")
         print("10. Delete Expense")
         print("11. Show Category Chart")
+        print("12. Show Category Pie Chart")
         print("0. Exit")
 
         choice = input("Choose an option: ")
@@ -178,6 +179,10 @@ def main():
 
         elif choice == "11":
             plot_category_expenses()
+
+        elif choice == "12":
+            plot_category_pie_chart()    
+    
         elif choice == "0":
             print("Exiting program...")
 
