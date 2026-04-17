@@ -21,3 +21,21 @@ A simple SQL-based personal finance tracker built with Python and SQLite.
 
 ```bash
 python3 main.py
+expense-tracker/
+├── main.py
+├── database.py
+├── charts.py
+├── finance.db (auto-created)
+├── .gitignore
+├── README.md
+
+---
+
+# 🚀 3️⃣ GitHub’a gönder
+
+Terminalde:
+
+```bash
+git add README.md
+git commit -m "Add README"
+git push
