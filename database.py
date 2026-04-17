@@ -188,3 +188,23 @@ def delete_expense(expense_id):
     conn.close()
 
     print("Expense deleted successfully.")
+
+def delete_expense(expense_id):
+    conn = connect_db()
+    cursor = conn.cursor()
+
+    cursor.execute("DELETE FROM expenses WHERE expense_id = ?", (expense_id,))
+
+    conn.commit()
+    conn.close()
+
+
+def expense_exists(expense_id):
+    conn = connect_db()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT 1 FROM expenses WHERE expense_id = ?", (expense_id,))
+    result = cursor.fetchone()
+
+    conn.close()
+    return result is not None    
