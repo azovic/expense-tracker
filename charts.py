@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 from database import get_expenses_by_category
-from charts import plot_category_expenses
+
 
 
 def plot_category_expenses():
@@ -9,7 +9,12 @@ def plot_category_expenses():
     categories = [row[0] for row in data]
     amounts = [row[1] for row in data]
 
-    plt.figure()
+    if all(amount == 0 for amount in amounts):
+        print("No expense data to plot.")
+        return
+
+
+    plt.figure(figsize=(8, 5))
     plt.bar(categories, amounts)
     plt.title("Expenses by Category")
     plt.xlabel("Category")
